@@ -1,12 +1,12 @@
 import './styles.css'
 
-import { ClearIndicator } from './CustomSelectComponents/ClearIndicator'
-import { Control } from './CustomSelectComponents/Control'
-import { ListLoadingIndicator } from './CustomSelectComponents/ListLoadingIndicator'
-import { Option } from './CustomSelectComponents/Option'
-import { dummyComponents } from './dummy-components'
+import { ClearIndicator } from './customSelectComponents/ClearIndicator'
+import { Control } from './customSelectComponents/Control'
+import { ListLoadingIndicator } from './customSelectComponents/ListLoadingIndicator'
+import { Option } from './customSelectComponents/Option'
+import { dummyComponents } from './dummyComponents'
 import { Select } from './Select'
-import { ValueContainer } from './CustomSelectComponents/ValueContainer'
+import { ValueContainer } from './customSelectComponents/ValueContainer'
 // import { AsyncSelect } from './Select/Async'
 
 const options = [
