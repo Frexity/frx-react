@@ -1,0 +1,23 @@
+.dropdown {
+  position: fixed;
+  border: 1px solid red;
+  display: none;
+  z-index: 1;
+  background: white;
+}
+
+input:focus + .dropdown {
+  display: block;
+}
+
+.card {
+  margin: 20px;
+  padding: 20px;
+  background-color: #eee;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
