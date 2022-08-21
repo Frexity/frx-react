@@ -1,7 +1,6 @@
 {
-  "name": "my-vue-app",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@frexity/react-select",
+  "version": "0.0.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,9 +9,7 @@
     "build": "npm run clean && tsc && npm run minify",
     "preview": "vite preview",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint src --fix --ext .js,.jsx,.ts,.tsx",
-    "prepublishOnly": "npm run build",
-    "publish": "npm publish"
+    "lint:fix": "eslint src --fix --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -33,5 +30,10 @@
     "rimraf": "^3.0.2",
     "typescript": "^4.6.4",
     "vite": "^3.0.7"
+  },
+  "publishConfig": {
+    "username": "frexuz",
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
