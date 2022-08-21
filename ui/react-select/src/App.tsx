@@ -1,12 +1,8 @@
 import './styles.css'
 
-import { ClearIndicator } from './customSelectComponents/ClearIndicator'
-import { Control } from './customSelectComponents/Control'
-import { ListLoadingIndicator } from './customSelectComponents/ListLoadingIndicator'
-import { Option } from './customSelectComponents/Option'
+import { customComponents } from './customSelectComponents'
 import { dummyComponents } from './dummyComponents'
 import { Select } from './Select'
-import { ValueContainer } from './customSelectComponents/ValueContainer'
 // import { AsyncSelect } from './Select/Async'
 
 const options = [
@@ -21,14 +17,6 @@ const options = [
   { label: 'Option 9', value: '9' },
   { label: 'Option 10', value: '10' },
 ]
-
-const customComponents = {
-  Option,
-  Control,
-  ClearIndicator,
-  ListLoadingIndicator,
-  ValueContainer,
-}
 
 export default function App() {
   return (
@@ -59,7 +47,7 @@ export default function App() {
             options={options}
             components={dummyComponents}
             selectedValueFormatter={(value) => {
-              return value ? `This is value: ${value}` : null
+              return `This is value: ${value}`
             }}
           />
         </div>
@@ -82,7 +70,7 @@ export default function App() {
             components={customComponents}
             canSelectMultipleValues
             selectedValueFormatter={(value) => {
-              return value ? `This is value: ${value}` : null
+              return `This is value: ${value}`
             }}
           />
         </div>

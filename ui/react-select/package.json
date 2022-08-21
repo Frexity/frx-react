@@ -1,6 +1,6 @@
 {
   "name": "@frexity/react-select",
-  "version": "0.0.4",
+  "version": "0.0.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -33,7 +33,6 @@
     "vite": "^3.0.7"
   },
   "publishConfig": {
-    "username": "frexuz",
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },

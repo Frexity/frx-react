@@ -7,7 +7,7 @@ import { ValueContainer } from './ValueContainer'
 import { Value } from './Value'
 import { MultiValue } from './MultiValue'
 
-export const dummyComponents = {
+export const customComponents = {
   Control,
   ClearIndicator,
   ControlLoadingIndicator,

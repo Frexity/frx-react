@@ -1,4 +1,4 @@
-import { ComponentType, CSSProperties, ReactNode } from 'react'
+import { ComponentType, CSSProperties, ReactNode, SyntheticEvent } from 'react'
 
 interface AsyncOptions {
   url: string
@@ -16,6 +16,8 @@ export interface OptionType {
 }
 
 export interface SelectComponents {
+  MultiValue: ComponentType<MultiValueComponentProps>
+  Value: ComponentType<ValueComponentProps>
   ValueContainer: ComponentType<ValueContainerComponentProps>
   Option: ComponentType<OptionComponentProps>
   Control: ComponentType<ControlComponentProps>
@@ -24,8 +26,10 @@ export interface SelectComponents {
   ListLoadingIndicator?: ComponentType<ListLoadingIndicatorComponentProps>
 }
 
+export type ValueFormatterFunction = (value: string) => string
+
 export interface SelectProps {
-  selectedValueFormatter?: (value: string) => string | null
+  selectedValueFormatter?: ValueFormatterFunction
   options: OptionType[] | undefined
   components: SelectComponents
   optionsListProps?: {
@@ -38,6 +42,15 @@ export interface SelectProps {
 
 export interface ValueContainerComponentProps {
   children: ReactNode
+}
+
+export interface ValueComponentProps {
+  value: string
+}
+
+export interface MultiValueComponentProps {
+  value: string
+  onClick: (event: SyntheticEvent) => void
 }
 
 export interface ClearIndicatorComponentProps {

@@ -8,6 +8,8 @@ import { selectStyles } from './styles'
 import { SelectProps } from './types'
 import { ValueContainer } from './ValueContainer'
 
+const defaultValueFormatter = (value: string) => value
+
 export const InnerSelect = ({
   selectedValueFormatter,
   components,
@@ -22,8 +24,10 @@ export const InnerSelect = ({
     <>
       <components.Control controlStyles={selectStyles.control}>
         <ValueContainer
-          selectedValueFormatter={selectedValueFormatter}
+          selectedValueFormatter={selectedValueFormatter || defaultValueFormatter}
           ValueContainerComponent={components.ValueContainer}
+          ValueComponent={components.Value}
+          MultiValueComponent={components.MultiValue}
         />
         {components.ClearIndicator && <ClearIndicator ClearIndicatorComponent={components.ClearIndicator} />}
         {components.ControlLoadingIndicator && <components.ControlLoadingIndicator isVisible={state.isLoading} />}
