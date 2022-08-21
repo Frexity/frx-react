@@ -1,6 +1,6 @@
 {
   "name": "@frexity/react-select",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,8 @@
     "build": "npm run clean && tsc && npm run minify",
     "preview": "vite preview",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint src --fix --ext .js,.jsx,.ts,.tsx"
+    "lint:fix": "eslint src --fix --ext .js,.jsx,.ts,.tsx",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -35,5 +36,9 @@
     "username": "frexuz",
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frexity/frx-react/tree/main/ui/react-select"
   }
 }
