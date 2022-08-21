@@ -2,7 +2,8 @@
   "name": "@frexity/react-select",
   "version": "0.1.1",
   "type": "module",
-  "main": "dist/Select/index.js",
+  "module": "dist/Select/index.js",
+  "files": ["dist"],
   "scripts": {
     "dev": "vite",
     "clean": "rimraf dist",
