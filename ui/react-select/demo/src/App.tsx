@@ -143,6 +143,7 @@ export default function App() {
         <li>- Dropdown same width as control?</li>
         <li>- Missing placeholder component</li>
         <li>- Set isFocused on context, so you can style control outside of the input focus</li>
+        <li>- Width should be calculated on inner control</li>
       </ul>
     </div>
   )

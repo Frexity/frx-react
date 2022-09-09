@@ -38,16 +38,19 @@ export const OptionsDropdown = ({ children, OptionsDropdownComponent }: OptionsD
     const borderBottomWidth = parseInt(style.borderBottomWidth, 10) || 0
     const inputHeight = normalizedHeight(input) + borderTopWidth + borderBottomWidth
 
+    dropdown.style.width = input.offsetWidth + 'px'
     setMenuPosition(dropdown, input, inputHeight, borderLeftWidth)
 
-    function scrollEventHandler(this: HTMLElement) {
-      if (!dropdown) {
+    function repositionEventHandler(this: HTMLElement) {
+      if (!dropdown || !state.isOpen) {
         return
       }
+      dropdown.style.width = this.offsetWidth + 'px'
       setMenuPosition(dropdown, this, inputHeight, borderLeftWidth)
     }
 
-    parent.addEventListener('scroll', scrollEventHandler.bind(input))
+    window.addEventListener('resize', repositionEventHandler.bind(input))
+    parent.addEventListener('scroll', repositionEventHandler.bind(input))
 
     dropdown.style.display = 'initial'
   }, [state.isOpen, state.inputElementId, state.dropdownElementId])
@@ -59,7 +62,9 @@ export const OptionsDropdown = ({ children, OptionsDropdownComponent }: OptionsD
   }
 
   return OptionsDropdownComponent ? (
-    <OptionsDropdownComponent dropdownStyles={styles}>{children}</OptionsDropdownComponent>
+    <OptionsDropdownComponent dropdownStyles={styles} dropdownProps={{ id: state.dropdownElementId }}>
+      {children}
+    </OptionsDropdownComponent>
   ) : (
     <div style={styles} id={state.dropdownElementId}>
       {children}

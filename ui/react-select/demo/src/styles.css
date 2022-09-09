@@ -2,8 +2,8 @@
   margin: 20px;
   padding: 20px;
   background-color: #eee;
-  overflow: hidden;
-  overflow-y: scroll;
+  /* overflow: hidden;
+  overflow-y: scroll; */
 }
 
 h3 {

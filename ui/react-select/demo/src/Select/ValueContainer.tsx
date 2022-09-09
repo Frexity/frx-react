@@ -94,6 +94,7 @@ export const ValueContainer = memo(
             <div
               style={{
                 width: state.isOpen ? 0 : undefined,
+                overflow: 'hidden',
               }}
             >
               {isArray && state.selectedValues ? (

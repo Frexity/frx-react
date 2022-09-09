@@ -96,4 +96,5 @@ export interface EmptyComponentProps {
 export interface OptionsDropdownComponentProps {
   children: ReactNode
   dropdownStyles: CSSProperties
+  dropdownProps: { id: string }
 }

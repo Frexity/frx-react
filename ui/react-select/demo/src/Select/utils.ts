@@ -2,7 +2,7 @@ export function getScrollParent(element: HTMLElement) {
   let style = window.getComputedStyle(element)
   const excludeStaticParent = style.position === 'absolute'
   const overflowRegex = /(auto|scroll)/
-  const documentElement = document.documentElement
+  const documentElement = window
 
   if (style.position === 'fixed') {
     return documentElement
