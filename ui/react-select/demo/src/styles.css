@@ -1,0 +1,16 @@
+.card {
+  margin: 20px;
+  padding: 20px;
+  background-color: #eee;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
